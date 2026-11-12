@@ -1,0 +1,179 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* Neutral background outside the box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.login-container {
+    background-color: #3b8cbe; /* The specific Zimbra Blue */
+    width: 650px;
+    padding: 40px 60px;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Logo Styles */
+.logo-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+/* Form Layout */
+.login-form {
+    font-size: 14px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.form-row label {
+    width: 100px; /* Fixed width to align inputs */
+    text-align: right;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.form-row input[type="text"],
+.form-row input[type="password"] {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 30px;
+}
+
+/* Action Row (Checkbox + Button) */
+.action-row {
+    justify-content: space-between;
+    margin-top: 5px;
+    padding-left: 115px; /* Align with inputs above (100px label + 15px gap) */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 5px;
+}
+
+.checkbox-container label {
+    width: auto;
+    text-align: left;
+    font-weight: normal;
+    margin-right: 0;
+}
+
+/* Button */
+.sign-in-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.sign-in-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Divider */
+.divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 25px 0;
+}
+
+/* Version Row */
+.version-row {
+    align-items: center;
+}
+
+.version-input-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+select {
+    padding: 4px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    min-width: 150px;
+    height: 28px;
+}
+
+.whats-this {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.whats-this:hover {
+    text-decoration: underline;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 700px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-row label {
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .form-row input[type="text"],
+    .form-row input[type="password"] {
+        width: 100%;
+    }
+
+    .action-row {
+        padding-left: 0;
+        flex-direction: row;
+        width: 100%;
+    }
+}

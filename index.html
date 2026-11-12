@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimbra Login</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+            background: #e9edf2;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background-image: url(Bbackground-zimbra.png);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- Logo Section -->
+        <div class="logo-header">
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Simplified Zimbra bubble icon representation -->
+                <path d="M50 10C27.9 10 10 27.9 10 50C10 72.1 27.9 90 50 90C72.1 90 90 72.1 90 50C90 27.9 72.1 10 50 10ZM50 80C33.4 80 20 66.6 20 50C20 33.4 33.4 20 50 20C66.6 20 80 33.4 80 50C80 66.6 66.6 80 50 80Z" fill="white"/>
+                <circle cx="40" cy="45" r="5" fill="white"/>
+                <circle cx="60" cy="45" r="5" fill="white"/>
+                <path d="M35 60 Q50 75 65 60" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <path d="M20 50 L10 40 L10 60 Z" fill="white"/>
+            </svg>
+            <span class="logo-text">zimbra</span>
+        </div>
+
+        <!-- Login Form -->
+        <form class="login-form">
+            
+            <!-- Username Row -->
+            <div class="form-row">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <!-- Password Row -->
+            <div class="form-row">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <!-- Checkbox and Button Row -->
+            <div class="form-row action-row">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="stay-signed-in">
+                    <label for="stay-signed-in">Stay signed in</label>
+                </div>
+                <button type="submit" class="sign-in-btn">Sign In</button>
+            </div>
+
+            <!-- Divider Line -->
+            <hr class="divider">
+
+            <!-- Version Row -->
+            <div class="form-row version-row">
+                <label for="version">Version:</label>
+                <div class="version-input-group">
+                    <select id="version" name="version">
+                        <option value="default">Default</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                    <a href="#" class="whats-this">What's This?</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
